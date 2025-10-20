@@ -15,14 +15,14 @@
 ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
 -- 11G 이전 문법 사용 허용 >> 아래 구문 사용 가능
 
-CREATE USER kh_jjm IDENTIFIED BY kh1234;
+CREATE USER workbook IDENTIFIED BY workbook;
 -- 계정 생성 구문 (kh_jjm : USERNAME / kh1234 : Password)
 -- ORA-65096: 공통 사용자 또는 롤 이름이 부적합합니다. >> 위 구문으로 오류 무시
 
-GRANT RESOURCE, CONNECT TO kh_jjm;
+GRANT RESOURCE, CONNECT TO workbook;
 -- 사용자 계정에 권한 부여 설정
 -- RESOURCE : 테이블이나 인덱스와 같은 DB 객체를 생성할 권한
 -- CONNECT : DB에 연결하고 로그인할 수 있는 권한
 
-ALTER USER kh_jjm DEFAULT TABLESPACE SYSTEM QUOTA UNLIMITED ON SYSTEM;
+ALTER USER workbook DEFAULT TABLESPACE SYSTEM QUOTA UNLIMITED ON SYSTEM;
 -- 객체가 생성될 수 있는 공간 할당량 무제한 지정
