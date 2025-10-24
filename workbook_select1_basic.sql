@@ -90,12 +90,14 @@ FROM TB_PROFESSOR;
 
 -----------------------------------------------------------
 
-SELECT STUDENT_NO, STUDENT_NAME
-FROM TB_STUDENT
+SELECT EXTRACT(YEAR FROM ENTRANCE_DATE) - EXTRACT(YEAR FROM TO_DATE('19'||SUBSTR(STUDENT_SSN, 1, 6),'YYYYMMDD')) 연도
+FROM TB_STUDENT;
 
 
 --------------------------------------------------------------
 
+SELECT TO_CHAR(TO_DATE('2020/12/25'), 'DAY') 
+FROM DUAL;
 
 
 
